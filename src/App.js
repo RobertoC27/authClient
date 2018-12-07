@@ -11,7 +11,7 @@ class App extends Component {
                 <div>
                     <Route path="/" component={Header} />
                     <Route path="/" exact component={Welcome} />
-                    <Route path="/signup" exact component={MyForm} />
+                    <Route path="/signup" exact render={() => <MyForm title="Signup"/>} />
 
                 </div>
             </BrowserRouter>
