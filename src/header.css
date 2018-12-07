@@ -1,0 +1,17 @@
+.btn-container {
+    margin: 0 2rem;
+    display: inline-block;
+    padding: 0 1rem;
+    background: white;
+    color: #097e1991;
+}
+
+.btn-container:hover {
+    background: #097e1991;
+    color: white;
+}
+
+.btn-container a{
+    text-decoration: none;
+    color: inherit;
+}
