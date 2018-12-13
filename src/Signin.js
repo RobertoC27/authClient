@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyForm from './MyForm';
+import AdvancedForm from './AdvancedForm';
 import axios from 'axios';
 
 class Signin extends Component {
@@ -24,7 +24,7 @@ class Signin extends Component {
         return (
             <div>
                 <h1>Sign in</h1>
-                <MyForm email="" password="" customSubmit={(email, password) => this.handler(email, password)}/>
+                <AdvancedForm email="" password="" customSubmit={(email, password) => this.handler(email, password)}/>
                 {this.state.errMsg}
                 <br/>
                 {this.state.authenticated}
