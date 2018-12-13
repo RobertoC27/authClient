@@ -9,16 +9,12 @@ class Signup extends Component {
         this.setState({ errMsg: null, authenticated: null });
         try {
             const response = await axios.post('http://35.165.129.25:3090/signup', { email, password });
-            console.log(response);
-            
             this.setState({ authenticated: response.data.token });
-            return true;
         } catch (err) {
-            console.log(err.response);
             this.setState({ errMsg: err.response.data.error });
             return false;
         }
-
+        return true;
     }
 
     render() {
