@@ -8,10 +8,10 @@ const MyForm = ( props) => {
         <Formik
             initialValues={{ email:props.email, password:props.password, endpoint:props.endpoint }}
             onSubmit={async (values, actions) => {
-                const success = await props.customSubmit(values);
+                await props.customSubmit({...values, login:props.login});
+                
                 actions.setSubmitting(false);
-                if(success)
-                    actions.resetForm();
+                
             }}
             validationSchema={Yup.object().shape({
                 email: Yup.string().email().required(),
